@@ -1,0 +1,287 @@
+
+
+/* ============== Resetting ============ */
+
+
+*{
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+
+
+#fonts{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    }
+
+
+body,p,h1,h2,h3,h4,h5,h6,ol,ul,li{
+    margin:0px;
+    padding:0px;
+}
+ 
+
+button{
+    font-size: 1em;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+}
+  
+
+/* ============== Content Containers ============ */
+
+
+body{    
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+}
+
+#fixed_section_1272{
+    display: flex;
+    max-width: 1272px;
+    width: 100%;
+    flex-direction: column;
+    top: 0px;
+    padding: 32px 16px;
+    justify-content:flex-start;
+    align-items:flex-start;
+    gap: 32px;
+    transition: 500ms all;
+}
+
+
+/*Navbar*/
+
+nav{
+    display: flex;
+    width: 100%;
+    z-index: 999;
+    padding: 16px 0px;
+    justify-content: space-between;
+    align-items: center;
+    transition: 300ms all;
+}
+
+nav #logo{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+nav button{
+    display: flex;
+    height: 48px;
+    cursor: pointer;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid black;
+    transition: 500ms all;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 188%;
+    
+}
+
+nav button:hover{
+    background-color: #F0F0F0;
+}
+
+nav .menu_button{
+    flex-direction: column;
+    width: 48px;
+    gap: 6px;  
+}
+
+nav .menu_button div{
+    height: 2px;
+    width: 20px;
+    background-color: #292929;
+    border-radius: 2px;
+}
+
+nav #linksCont button{
+    width:92px;
+}
+
+nav #linksCont{
+    display: flex;
+    gap: 12px;
+}
+
+
+/*========= Sections ===========*/
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 32px 0px;
+    gap: 48px;
+    /*width: 100%;*/
+    align-self: stretch;
+    transition: 300ms all;
+}
+
+.section_1{
+    display: flex;
+    order: 1;
+}
+
+
+/*Section Texts*/
+section .headingandbody_cont{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 710px;
+    order: 0;
+}
+
+.headingandbody_cont h1{
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 96%;
+    color: #292929;
+    align-self: stretch;
+    order: 0;
+}
+
+.headingandbody_cont p{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 188%;
+    color: #666666;
+    order: 1;
+    align-self: stretch;
+}
+
+
+/*Section Buttons*/
+
+section .buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    order: 1;
+    flex-grow: 0;
+}
+
+section .buttons button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
+    width: 140px;
+    height: 52px;
+    /*height: 52px;*/
+    border-radius: 12px;
+    border: 1px solid #292929;
+    flex-grow: 0;
+    box-sizing: border-box;
+    transition: all 600ms;
+}
+
+section .buttons #CTA_button_1{
+    background-color: #292929;
+    order: 0;
+    color: #fff;
+}
+
+section .buttons #CTA_button_1:hover{
+    background-color: #7736E0;
+    border: 2px solid #7736E0;
+}
+
+
+section .buttons #CTA_button_2{
+    background-color: #fff;
+    order: 1;
+}
+
+section .buttons #CTA_button_2:hover{
+    border: 2px solid #7736E0;
+    color: #7736E0;;
+}
+
+
+
+
+
+
+
+/*=============== Media Queries ================*/
+
+
+
+/*PC view (for more than tablet screen)*/
+  @media screen and (min-width: 768px){
+
+    nav .menu_button{
+        display: none;
+    }
+
+  }
+
+
+/*Tablet screens only*/
+
+@media only screen and (min-width: 768px) and (max-width: 1366px){
+
+    nav{
+        padding: 16px 106px;
+        
+    }
+    section{
+        padding: 16px 106px;
+    }
+  }
+
+
+  /* Smaller tablet screens only (Exclusive)*/ 
+
+  @media only screen and (min-width: 601px) and (max-width: 768px){
+
+    nav #linksCont{
+        display: none;
+    }
+
+    nav{
+        padding: 0px 64px;
+    }
+
+    section{
+        padding: 16px 64px;
+    }
+
+  }
+
+
+  /*Mobile view (For less than tablet screen)*/
+  @media screen and (max-width: 768px){
+
+    nav #linksCont{
+        display: none;
+    }
+
+  }
+
+
